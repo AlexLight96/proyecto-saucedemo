@@ -36,4 +36,8 @@ public class BasePage {
         return waitForVisible(locator).getText();
     }
 
+    protected double parseAmount(String text) {
+        return Double.parseDouble(text.substring(text.indexOf('$') + 1));
+    }
+
     }
